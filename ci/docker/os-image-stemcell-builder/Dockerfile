@@ -48,8 +48,8 @@ RUN groupadd -g ${GROUP_ID} ubuntu                  \
 ADD scripts/update.sh /tmp/update.sh
 RUN /tmp/update.sh && rm /tmp/update.sh
 
-ENV OVF_TOOL_INSTALLER VMware-ovftool-4.1.0-2459827-lin.x86_64.bundle
-ENV OVF_TOOL_INSTALLER_SHA1 b907275c8d744bb54717d24bb8d414b19684fed4
+ENV OVF_TOOL_INSTALLER VMware-ovftool-4.4.0-15722219-lin.x86_64.bundle
+ENV OVF_TOOL_INSTALLER_SHA1 55bd0cd757306649c96eee78bc1c6dbd70a6b0b7
 ADD ${OVF_TOOL_INSTALLER} /tmp/ovftool_installer.bundle
 ADD scripts/install-ovf.sh /tmp/install-ovf.sh
 RUN /tmp/install-ovf.sh && rm /tmp/install-ovf.sh
